@@ -1,8 +1,8 @@
-# Rede Social
+# Rede Social ***Amipets***
 
 ### **Descrição:**
 
-Desenvolvimento do ***backend*** de uma Rede Social utilizando o padrão ***REST*** como nota parcial da disciplina de Sistemas Distribuídos.
+Desenvolvimento do ***backend*** da Rede Social Amipets utilizando o padrão ***REST*** como nota parcial da disciplina de Sistemas Distribuídos. Em síntese, essa rede social tem como objetivo divulgar pets perdidos, encontrados ou disponíveis para adoção.
 
 
 ### **Requisitos:**
