@@ -1,0 +1,25 @@
+{
+  "name": "amipets",
+  "version": "1.0.0",
+  "description": "Implementação do backend com padrão REST de uma rede social para divulgar pets perdidos, encontrados ou disponíveis para adoção (nota de Sistemas Distribuídos)",
+  "main": "src/index.html",
+  "author": "Emanuelle Lemos <manuluz.lemos@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^15.0.0",
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.15.0",
+    "sequelize-cli": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
