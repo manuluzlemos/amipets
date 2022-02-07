@@ -52,7 +52,7 @@ class PostagemService{
 
     async listarPostagensSalvas(id_usuario){
         const where = `WHERE 
-            salvos.id_usuario = usuarios.id_usuario AND salvos.id_postagem = postagens.id_postagem AND salvos.id_postagem = ${id_usuario}`;
+            salvos.id_usuario = usuarios.id_usuario AND salvos.id_postagem = postagens.id_postagem AND salvos.id_usuario = ${id_usuario}`;
         const [postagens, ] = await postgres.query(`SELECT postagens.*, username FROM postagens, usuarios, salvos ${where}`);
         
         return { postagens : postagens };
