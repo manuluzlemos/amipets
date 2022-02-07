@@ -42,6 +42,8 @@ Desenvolvimento do ***backend*** da Rede Social Amipets utilizando o padrão ***
 
 * O frontend está disponível em:
 
+    https://github.com/manuluzlemos/amipets-front
+
 
 ### **Instruções para rodar localmente**
 
@@ -68,12 +70,6 @@ Desenvolvimento do ***backend*** da Rede Social Amipets utilizando o padrão ***
     ```
     http://localhost:3001
     ```
-
-### **Heroku**
-
-* A aplicação está disponível em: 
-
-    xxx 
 
 ### **Autora**
 
