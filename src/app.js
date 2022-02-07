@@ -35,6 +35,7 @@ app.post("/comentario/listar", comentarioController.listar());
 
 // Rotas de postagens salvas
 app.post("/salvos/salvar", salvoController.salvar());
+app.post("/salvos/retirar", salvoController.retirar());
 app.post("/salvos/verificar", salvoController.verificar());
 
 module.exports = {
