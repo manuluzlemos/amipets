@@ -59,6 +59,21 @@ class PostagemController{
         });
     }
 
+    listarPublicados(){
+        return (async (request, response) => {
+            try {
+                const { id_usuario } = request.body;
+                const resultado = await postagemService.listarPostagensPublicadas(id_usuario);
+            
+                response.json(resultado);
+            } catch (error) {
+                console.log(error);
+                response.json({ error: error });
+            }
+        });
+    }
+
+
 }
 
 const postagemController = new PostagemController();

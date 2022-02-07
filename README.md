@@ -30,10 +30,13 @@ Desenvolvimento do ***backend*** da Rede Social Amipets utilizando o padrão ***
     - **/mudar**: rota post que muda o status da postagem -> parâmetros: (id_postagem, novo_status)
     - **/listar**: rota post que lista as postagens e suas respectivas quantidades de comentários de acordo com os critérios -> parâmetros opcionais: (status, categoria, especie)
     - **/salvos**: rota post que lista as postagens salvas pelo usuário;
+    - **/publicados**: rota post que lista as postagens publicadas pelo usuário;
 * **/comentario**: rotas de comentarios
     - **/publicar**: rota post que publica comentario -> parâmetros: (texto, id_usuario, id_postagem)
     - **/listar**: rota post que retorna comentários de uma postagem (inclusive, o username de quem publicou) -> parâmetros: (id_postagem)
-* **/salvar**: rota post em que o usuário salva uma postagem -> parâmetros: (id_usuario, id_postagem).
+* **/salvos**: rotas das postagens salvas
+    - **/salvar**: rota post em que o usuário salva uma postagem -> parâmetros: (id_usuario, id_postagem)
+    - **/verificar**: rota post em que se verifica se o usuário salvou a postagem
 
 ### **Frontend da aplicação**
 

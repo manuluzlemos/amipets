@@ -5,10 +5,10 @@ class UsuarioService{
         const consulta = Usuario;
             
         if(await consulta.findOne({where: {username: username}}))
-            return { error: 'Username já existe', status: false};
+            return { error: 'Username já existe', registro: false};
 
         if(await consulta.findOne({where: {email: email}}))
-            return { error: 'Email já existe', status: false };
+            return { error: 'Email já existe', registro: false };
 
         const usuario = await Usuario.create({
             nome,
@@ -18,7 +18,7 @@ class UsuarioService{
             email
         });
 
-        return { usuario: usuario };
+        return { usuario: usuario, registro: true };
     }
 
     async logarUsuario(username, senha){

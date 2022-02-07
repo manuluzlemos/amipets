@@ -14,6 +14,20 @@ class SalvoController{
             }
         });
     }
+
+    verificar(){
+        return (async (request, response) => {
+            try {
+                const { id_usuario, id_postagem } = request.body;
+                const resultado = await salvoService.verificarSalvo(id_usuario, id_postagem);
+            
+                response.json(resultado);
+            } catch (error) {
+                console.log(error);
+                response.json({ error: error });
+            }
+        });
+    }
 }
 
 const salvoController = new SalvoController();

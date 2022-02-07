@@ -5,7 +5,9 @@ const { salvoController } = require('./controller/salvo.controller');
 
 const express = require('express');
 const app = express();
+const cors = require('cors');
 
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static('public'));
@@ -25,13 +27,15 @@ app.post("/postagem/publicar", postagemController.publicar());
 app.post("/postagem/mudar", postagemController.mudarStatus());
 app.post("/postagem/listar", postagemController.listar());
 app.post("/postagem/salvos", postagemController.listarSalvos());
+app.post("/postagem/publicados", postagemController.listarPublicados());
 
 // Rotas de comentário
 app.post("/comentario/publicar", comentarioController.publicar());
 app.post("/comentario/listar", comentarioController.listar());
 
 // Rotas de postagens salvas
-app.post("/salvar", salvoController.salvar());
+app.post("/salvos/salvar", salvoController.salvar());
+app.post("/salvos/verificar", salvoController.verificar());
 
 module.exports = {
     app,

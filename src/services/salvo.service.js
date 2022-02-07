@@ -20,6 +20,15 @@ class SalvoService{
 
         return { salvo: salvo };
     }
+
+    async verificarSalvo(id_usuario, id_postagem){
+        
+        const salvo = await Salvo.findOne({ where: {id_usuario: id_usuario, id_postagem: id_postagem} });
+        if(salvo === null)
+            return { salvo: false };
+
+        return { salvo: true };
+    }
 }
 
 const salvoService = new SalvoService();
